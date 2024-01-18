@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Odin;
+    src: url(./Norse-Bold.otf);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
@@ -8,9 +13,14 @@ body {
     flex-direction: column;
 }
 
+.content-box {
+    display: flex;
+    flex-direction: column;
+}
+
 .logo-container {
     width: 100%;
-    height: 200px;
+    height: 250px;
 
     display: flex;
     flex-direction: column;
@@ -23,82 +33,176 @@ body {
 }
 
 .logo-float {
-    background-color: rgb(0, 0, 0, 40%);
+    background-color: rgb(0, 0, 0, 45%);
     color: #fff;
-    font-size: 3em;
+    font-size: 4em;
+    font-family: Odin;
 
     width: 100%;
     
     text-align: center;
-    padding: 50px 0;
+    padding: 40px 0;
     margin: auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-float img {
+    height: 75px;
 }
 
 .photocredit {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
+    font-size: 0.8rem;
 
     color: white;
 }
 
+form {
+    width: 100%;
+}
+
+.toptext {
+    flex: 1;
+    padding: 2rem;
+}
+
 .toptext p {
-    font-size: 1.5rem;
-    padding-left: 2rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    padding: 0;
 }
 
 .formfields {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
 
     background-color: #fff;
     box-shadow: 0px 3px 5px rgb(0, 0, 0, 40%) ;
 
-    display: column;
+    flex: 0;
 }
 
 .formfields h1 {
     font-size: 1.5em;
-    margin: 0 2rem 1rem 2rem;
-}
-
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
+    padding-bottom: 1em;
 }
 
 div.field {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+div.field div.error {
+    position: absolute;
+    bottom: -1.3em;
+    font-size: 0.8em;
+    color: #c00;
+}
+
+div.field > label {
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="pattern"],
+input[type="tel"],
+input[type="password"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.invalid {
+    outline: 1px solid #d00;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="pattern"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    outline: 2px solid dodgerblue;
+    box-shadow: 2px 2px 10px #666;
+}
+
+.submission {
+    padding: 2rem;
+    margin-top: 1em;
+    flex: 1;
+}
+
+.submission > p {
+    font-size: 0.8em;
+}
+
+button {
+    padding: 1em 3em;
+    background-color: #596D48;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2em;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
 
+@media only screen and (min-width:600px) {
+    /* allow form fields to wrap */
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 600px;
+    }
+
+    div.field {
+        flex-basis: 200px;
+        flex-grow: 1;
+        justify-content:  space-around;
+        margin-right: 1.5em;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
+    /* move top banner to side */
     body {
         flex-direction: unset;
         height: 100vh;
     }
 
     .logo-container {
-        height: 100vh;
-        width: 400px;
+        height: 100%;
+        width: 500px;
         flex: none;
     }
 
+    .toptext {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .toptext p {
+        max-width: 650px;
+        font-size: 1.5em;
+    }
+
     .content-box {
-        width: 100%;
+        height: 100%;
+
     }
 
     .logo-float {
         margin: unset;
-        margin-top: 30vh;
-    }
-
-    div.field {
-        flex-basis: 40%;
-        justify-content:  space-around;
-        margin-right: 1.5em;
+        margin-top: 20vh;
     }
 }
