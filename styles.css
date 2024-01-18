@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #eee;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background-color: #214b11;
+    background-image: url(./halie-west-25xggax4bSA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-float {
+    background-color: rgb(0, 0, 0, 40%);
+    color: #fff;
+    font-size: 3em;
+
+    width: 100%;
+    
+    text-align: center;
+    padding: 50px 0;
+    margin: auto 0;
+}
+
+.photocredit {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    color: white;
+}
+
+.toptext p {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    font-weight: bold;
+}
+
+.formfields {
+    padding: 1rem 2rem;
+
+    background-color: #fff;
+    box-shadow: 0px 3px 5px rgb(0, 0, 0, 40%) ;
+
+    display: column;
+}
+
+.formfields h1 {
+    font-size: 1.5em;
+    margin: 0 2rem 1rem 2rem;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    body {
+        flex-direction: unset;
+        height: 100vh;
+    }
+
+    .logo-container {
+        height: 100vh;
+        width: 400px;
+        flex: none;
+    }
+
+    .content-box {
+        width: 100%;
+    }
+
+    .logo-float {
+        margin: unset;
+        margin-top: 30vh;
+    }
+
+    div.field {
+        flex-basis: 40%;
+        justify-content:  space-around;
+        margin-right: 1.5em;
+    }
+}

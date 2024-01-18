@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo-float">LOGO</div>
+        <div class="photocredit">
+            Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </div>
+    </div>
+    <div class="content-box">
+        <div class="toptext">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <form action="./signup.html" method="post">
+            <div class="formfields">
+                <h1>Let's do this!</h1>
+
+                <div class="wrap">
+                    <div class="field">
+                        <label for="firstname">First Name</label>
+                        <input 
+                            type="text" 
+                            name="firstname" 
+                            id="firstname"
+                            required
+                        />
+                    </div>
+    
+                    <div class="field">
+                        <label for="lastname">Last Name</label>
+                        <input 
+                            type="text"
+                            name="lastname"
+                            id="lastname"
+                            required
+                        />
+                    </div>
+    
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            required
+                        />
+                    </div>
+    
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                        />
+                    </div>
+    
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            required
+                        />
+                    </div>
+    
+                    <div class="field">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input
+                            type="password"
+                            name="confirm-password"
+                            id="confirm-password"
+                            required
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="submission">
+                <button type="submit">Create Account</button>
+                <p>
+                    Already have an account?
+                    <a href=".\login.html">Log In</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
