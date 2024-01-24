@@ -21,7 +21,7 @@
                 href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
     </div>
-    <form action="./signup.html" method="post">
+    <form id="signupform" action="./signup.html">
         <div class="content-box">
             <div class="toptext">
                 <p>This is not a real online service! You know you need something like this in your life to help you
@@ -34,37 +34,70 @@
                 <div class="wrap">
                     <div class="field">
                         <label for="firstname">First Name</label>
-                        <input type="text" name="firstname" id="firstname" required />
+                        <input 
+                            type="text" 
+                            name="firstname" 
+                            id="firstname"
+                            pattern="[A-Za-z\-]+" 
+                            required 
+                            autocomplete />
+                        <div class="firstname error"></div>
                     </div>
 
                     <div class="field">
                         <label for="lastname">Last Name</label>
-                        <input type="text" name="lastname" id="lastname" required />
-                        <div class="error"></div>
+                        <input 
+                            type="text" 
+                            name="lastname" 
+                            id="lastname"
+                            pattern="[A-Za-z\-]+" 
+                            required 
+                            autocomplete />
+                        <div class="lastname error"></div>
                     </div>
 
                     <div class="field">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" required />
-                        <div class="error"></div>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            required 
+                            autocomplete />
+                        <div class="email error"></div>
                     </div>
 
                     <div class="field">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" />
-                        <div class="error"></div>
+                        <input 
+                            type="tel" 
+                            name="phone" 
+                            id="phone"
+                            pattern="[0-9\-\(\)\s]{7,15}" 
+                            autocomplete />
+                        <div class="phone error"></div>
                     </div>
 
                     <div class="field">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" required />
-                        <div class="error"></div>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            id="password" 
+                            required 
+                            pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%?])(?=.*\d)[A-Za-z\d!@#$%?]{8,}" />
+                        <div class="password error"></div>
                     </div>
 
                     <div class="field">
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="password" name="confirm-password" id="confirm-password" required />
-                        <div class="error"></div>
+                        <input 
+                            type="password" 
+                            name="confirm-password" 
+                            id="confirm-password" 
+                            required
+                            />
+                        <div class="confirm-password error"></div>
                     </div>
                 </div>
             </div>

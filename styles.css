@@ -101,7 +101,7 @@ div.field {
 
 div.field div.error {
     position: absolute;
-    bottom: -1.3em;
+    top: 3.7em;
     font-size: 0.8em;
     color: #c00;
 }
